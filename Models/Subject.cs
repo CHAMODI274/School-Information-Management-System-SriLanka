@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SchoolManagementSystem.Models
 {
-    partial class Subject
+    public class Subject
     {
         [Key]
         public int SubjectId { get; set; }
