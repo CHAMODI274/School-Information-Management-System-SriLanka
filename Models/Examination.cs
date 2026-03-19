@@ -12,7 +12,7 @@ namespace SchoolManagementSystem.Models
         public int ExamId { get; set; }
         [Required] [MaxLength(150)] public string ExamName { get; set; } = string.Empty;
         
-        public ExamType ExamType { get; set; } // Use enum
+        [MaxLength(20)] public ExamType ExamType { get; set; } // Use enum
         
         [MaxLength(50)] public string Term { get; set; } = string.Empty;
         [Column(TypeName = "decimal(5,2)")]

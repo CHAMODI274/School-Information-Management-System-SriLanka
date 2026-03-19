@@ -15,7 +15,7 @@ namespace SchoolManagementSystem.Models
         public int MaxStudents { get; set; }
         [MaxLength(20)] public string? RoomNumber { get; set; }
         
-        public MediumType Medium { get; set; } // Use enum
+        [MaxLength(10)] public MediumType Medium { get; set; } // Use enum
 
         public int TeacherId { get; set; } // The primary class teacher
         public Teacher Teacher { get; set; } = null!;

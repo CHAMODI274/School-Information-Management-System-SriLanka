@@ -12,7 +12,7 @@ namespace SchoolManagementSystem.Models
         public int EnrollmentId { get; set; }
         public DateTime EnrollmentDate { get; set; }
         
-        public EnrollmentStatus Status { get; set; } // Uses enum
+        [MaxLength(20)] public EnrollmentStatus Status { get; set; } // Uses enum
 
         public int StudentId { get; set; }
         public Student Student { get; set; } = null!;

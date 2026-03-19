@@ -14,7 +14,7 @@ namespace SchoolManagementSystem.Models
         [Column(TypeName = "decimal(5,2)")]
         public decimal MarksObtained { get; set; }
         
-        public GradeType Grade { get; set; } // Uses the new enum
+        [MaxLength(10)] public GradeType Grade { get; set; } // Uses the new enum
         
         [Column(TypeName = "decimal(5,2)")]
         public decimal Percentage { get; set; }
