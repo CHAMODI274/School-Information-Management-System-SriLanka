@@ -7,7 +7,6 @@ C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\SchoolManagementSystem.run
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\SchoolManagementSystem.dll
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\SchoolManagementSystem.pdb
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Humanizer.dll
-C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.Build.dll
@@ -238,3 +237,15 @@ C:\Users\ASUS\SchoolManagementSystem\obj\Debug\net9.0\refint\SchoolManagementSys
 C:\Users\ASUS\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.pdb
 C:\Users\ASUS\SchoolManagementSystem\obj\Debug\net9.0\SchoolManagementSystem.genruntimeconfig.cache
 C:\Users\ASUS\SchoolManagementSystem\obj\Debug\net9.0\ref\SchoolManagementSystem.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\BCrypt.Net-Next.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\ASUS\SchoolManagementSystem\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
