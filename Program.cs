@@ -1,28 +1,49 @@
 using SchoolManagementSystem.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using SchoolManagementSystem.Services;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Register DbContext with MySQL
+// 1. Register DbContext with MySQL
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContext<SchoolDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
 
-// Add services to the container.
+
+// 2. Register JwtService -> so it can be injected into AuthController
+builder.Services.AddScoped<JwtService>();
+
+// 3. JWT Authentication
+
+var jwtKey = builder.Configuration["Jwt:Key"]
+    ?? throw new Exception("Jwt:Key is missing from appsettings.json");
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(Options =>
+    {
+        Options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
+        };
+    });
+
+
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
 var app = builder.Build();
-
-
-//builder.Services.AddOpenApi();
-// Configure the HTTP request pipeline.
-/*if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}*/
 
 
 app.UseHttpsRedirection();
