@@ -4,6 +4,7 @@ namespace SchoolManagementSystem.DTOs.Student
 {
     public class CreateStudentDto
     {
+        // Fields required when admitting a new student
         public string AdmissionNumber { get; set; } = string.Empty;
         public string FullName { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
@@ -23,6 +24,7 @@ namespace SchoolManagementSystem.DTOs.Student
 
     public class UpdateStudentDto
     {
+        // Fields allowed to be changed after admission
         public string FullName { get; set; } = string.Empty;
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
@@ -41,6 +43,7 @@ namespace SchoolManagementSystem.DTOs.Student
 
     public class StudentResponseDto
     {
+        // Fields returned to the client when fetching student data
         public int StudentId { get; set; }
         public string AdmissionNumber { get; set; } = string.Empty;
         public string FullName { get; set; } = string.Empty;
