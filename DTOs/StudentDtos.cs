@@ -1,0 +1,61 @@
+using SchoolManagementSystem.Models.Enums;
+
+namespace SchoolManagementSystem.DTOs.Student
+{
+    public class CreateStudentDto
+    {
+        public string AdmissionNumber { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public Gender Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public DateTime EnrollmentDate { get; set; }
+        public string? Nationality { get; set; }
+        public string? Religion { get; set; }
+        public string? PreviousSchool { get; set; }
+        public string? ClassEntered { get; set; }
+        public string? Photo { get; set; }
+        public int ParentId { get; set; }
+    }
+
+
+
+    public class UpdateStudentDto
+    {
+        public string FullName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public Gender Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string? Nationality { get; set; }
+        public string? Religion { get; set; }
+        public string? PreviousSchool { get; set; }
+        public string? Photo { get; set; }
+        public StudentStatus CurrentStatus { get; set; }
+        public DateTime? PassOutDate { get; set; }
+        public int ParentId { get; set; }
+    }
+
+
+
+    public class StudentResponseDto
+    {
+        public int StudentId { get; set; }
+        public string AdmissionNumber { get; set; } = string.Empty;
+        public string FullName { get; set; } = string.Empty;
+        public string FirstName { get; set; } = string.Empty;
+        public string LastName { get; set; } = string.Empty;
+        public string Gender { get; set; } = string.Empty;
+        public DateTime DateOfBirth { get; set; }
+        public DateTime EnrollmentDate { get; set; }
+        public string? Nationality { get; set; }
+        public string? Religion { get; set; }
+        public string? PreviousSchool { get; set; }
+        public string? ClassEntered { get; set; }
+        public DateTime? PassOutDate { get; set; }
+        public string CurrentStatus { get; set; } = string.Empty;
+        public string? Photo { get; set; }
+        public int ParentId { get; set; }
+    }
+}
