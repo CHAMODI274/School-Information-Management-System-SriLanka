@@ -13,11 +13,11 @@ namespace SchoolManagementSystem.DTOs.Class
         [Required(ErrorMessage = "Section is required.")]
         public string Section { get; set; } = string.Empty;  // e.g. "A", "B", "C"
 
-        [Required] public int MaxStudents { get; set; }
+        public int MaxStudents { get; set; }
 
         public string? RoomNumber { get; set; }  // Optional: classroom number
 
-        [Required] public MediumType Medium { get; set; }  // Medium enum: English, Sinhala, Tamil
+        public MediumType Medium { get; set; }  // Medium enum: English, Sinhala, Tamil
 
         [Required(ErrorMessage = "Class teacher is required.")]
         public int TeacherId { get; set; }  // Class teacher assigned to this class
@@ -37,11 +37,11 @@ namespace SchoolManagementSystem.DTOs.Class
         [Required(ErrorMessage = "Section is required.")]
         public string Section { get; set; } = string.Empty;
 
-        [Required] public int MaxStudents { get; set; }
+        public int MaxStudents { get; set; }
 
         public string? RoomNumber { get; set; }
 
-        [Required] public MediumType Medium { get; set; }
+        public MediumType Medium { get; set; }
 
         [Required(ErrorMessage = "Class teacher is required.")]
         public int TeacherId { get; set; } // Class teacher can be reassigned

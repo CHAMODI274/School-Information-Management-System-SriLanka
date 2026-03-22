@@ -6,8 +6,8 @@ namespace SchoolManagementSystem.DTOs.Attendance
     public class CreateAttendanceDto
     {
         // Fields required when marking attendance for a student
-        [Required]public DateTime Date { get; set; }
-        [Required]public AttendanceStatus Status { get; set; }
+        public DateTime Date { get; set; }
+        public AttendanceStatus Status { get; set; }
 
         [Required(ErrorMessage = "Teacher is required.")]
         public int TeacherId { get; set; }
@@ -20,7 +20,7 @@ namespace SchoolManagementSystem.DTOs.Attendance
     public class UpdateAttendanceDto
     {
         // Fields allowed to be updated on an attendance record
-        [Required] public AttendanceStatus Status { get; set; }
+        public AttendanceStatus Status { get; set; }
     }
 
 

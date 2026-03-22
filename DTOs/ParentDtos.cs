@@ -6,7 +6,7 @@ namespace SchoolManagementSystem.DTOs.Parent
     public class CreateParentDto
     {
         // Fields required when creating a new parent record
-        [Required] public Title Title { get; set; }
+        public Title Title { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; } = string.Empty;
@@ -30,7 +30,7 @@ namespace SchoolManagementSystem.DTOs.Parent
     public class UpdateParentDto
     {
         // Fields allowed to be updated on a parent record
-        [Required] public Title Title { get; set; }
+        public Title Title { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; } = string.Empty;
@@ -43,7 +43,7 @@ namespace SchoolManagementSystem.DTOs.Parent
 
         [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; } = string.Empty;
-        
+
         public string? Occupation { get; set; }
         public string? WorkPlace { get; set; }
         public string? WorkPhone { get; set; }

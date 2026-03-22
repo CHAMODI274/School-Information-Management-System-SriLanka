@@ -31,7 +31,6 @@ namespace SchoolManagementSystem.DTOs
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email    { get; set; } = string.Empty;
 
-        [Required]
         public UserRole Role   { get; set; }   // Admin | Teacher | Student | Parent
     }
     

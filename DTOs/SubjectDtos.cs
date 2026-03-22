@@ -14,8 +14,8 @@ namespace SchoolManagementSystem.DTOs.Subject
 
         public string? Description { get; set; }
 
-        [Required] public int Credits { get; set; }
-        [Required] public bool IsCompulsory { get; set; }
+        public int Credits { get; set; }
+        public bool IsCompulsory { get; set; }
     }
 
 
@@ -30,10 +30,10 @@ namespace SchoolManagementSystem.DTOs.Subject
         public string SubjectCode { get; set; } = string.Empty;
 
         public string? Description { get; set; }
-        
-        [Required] public int Credits { get; set; }
-        [Required] public bool IsCompulsory { get; set; }
-        [Required] public bool IsActive { get; set; }     
+
+        public int Credits { get; set; }
+        public bool IsCompulsory { get; set; }
+        public bool IsActive { get; set; }     
     }
 
 

@@ -6,7 +6,7 @@ namespace SchoolManagementSystem.DTOs.Teacher
     public class CreateTeacherDto
     {
         // Fields required when creating a new teacher record
-        [Required] public Title Title { get; set; } 
+        public Title Title { get; set; } 
 
         [Required(ErrorMessage = "Name is required.")]                           
         public string Name { get; set; } = string.Empty;
@@ -14,8 +14,8 @@ namespace SchoolManagementSystem.DTOs.Teacher
         [Required(ErrorMessage = "NIC is required.")]
         public string NIC { get; set; } = string.Empty;
 
-        [Required] public Gender Gender { get; set; }
-        [Required] public DateTime DateOfBirth { get; set; }
+        public Gender Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; } = string.Empty;
@@ -27,8 +27,8 @@ namespace SchoolManagementSystem.DTOs.Teacher
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
 
-        [Required] public DateTime DateOfJoining { get; set; }
-        [Required] public EmployeeStatus EmploymentStatus { get; set; }
+        public DateTime DateOfJoining { get; set; }
+        public EmployeeStatus EmploymentStatus { get; set; }
         
         [Required(ErrorMessage = "Employee type is required.")]
         public string EmployeeType { get; set; } = string.Empty;
@@ -53,15 +53,15 @@ namespace SchoolManagementSystem.DTOs.Teacher
     public class UpdateTeacherDto
     {
         // Fields allowed to be updated on a teacher record
-        [Required] public Title Title { get; set; }
+        public Title Title { get; set; }
 
         [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "NIC is required.")]
         public string NIC { get; set; } = string.Empty;
-        [Required] public Gender Gender { get; set; }
-        [Required] public DateTime DateOfBirth { get; set; }
+        public Gender Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
         [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; } = string.Empty;
@@ -73,7 +73,7 @@ namespace SchoolManagementSystem.DTOs.Teacher
         [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
 
-        [Required] public EmployeeStatus EmploymentStatus { get; set; }
+        public EmployeeStatus EmploymentStatus { get; set; }
 
         [Required(ErrorMessage = "Employee type is required.")]
         public string EmployeeType { get; set; } = string.Empty;

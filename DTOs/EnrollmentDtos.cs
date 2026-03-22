@@ -6,7 +6,7 @@ namespace SchoolManagementSystem.DTOs.Enrollment
     public class CreateEnrollmentDto
     {
         // Fields required when enrolling a student into a class
-        [Required] public DateTime EnrollmentDate { get; set; }
+        public DateTime EnrollmentDate { get; set; }
 
         [Required(ErrorMessage = "Student is required.")]
         public int StudentId { get; set; }
@@ -22,7 +22,7 @@ namespace SchoolManagementSystem.DTOs.Enrollment
     public class UpdateEnrollmentDto
     {
         // Fields allowed to be updated on an enrollment record
-        [Required] public EnrollmentStatus Status { get; set; }
+        public EnrollmentStatus Status { get; set; }
 
         [Required(ErrorMessage = "Class is required.")]
         public int ClassId { get; set; }

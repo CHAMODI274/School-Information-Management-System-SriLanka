@@ -10,9 +10,9 @@ namespace SchoolManagementSystem.DTOs.Examination
        [Required(ErrorMessage = "Exam name is required.")]
        public string ExamName { get; set; } = string.Empty;
        
-       [Required] public ExamType ExamType { get; set; }
+       public ExamType ExamType { get; set; }
        [Required] public string Term { get; set; } = string.Empty;
-       [Required] public decimal MaxMark { get; set; }
+       public decimal MaxMark { get; set; }
 
        public string? Description { get; set; } // optional
 
@@ -28,13 +28,13 @@ namespace SchoolManagementSystem.DTOs.Examination
         [Required(ErrorMessage = "Exam name is required.")]
         public string ExamName { get; set; } = string.Empty;
         
-        [Required] public ExamType ExamType { get; set; }
+        public ExamType ExamType { get; set; }
 
         [Required(ErrorMessage = "Term is required.")]
         public string Term { get; set; } = string.Empty;
 
-        [Required] public decimal MaxMark { get; set; }
-        
+        public decimal MaxMark { get; set; }
+
         public string? Description { get; set; }
     }
 

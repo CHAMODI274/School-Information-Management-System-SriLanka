@@ -12,16 +12,16 @@ namespace SchoolManagementSystem.DTOs.ExaminationClass
         [Required(ErrorMessage = "Class is required.")]
         public int ClassId { get; set; }  // Class the exam is scheduled for
 
-        [Required] public DateTime ScheduledDate { get; set; }
-        [Required] public TimeSpan ScheduledTime { get; set; }
+        public DateTime ScheduledDate { get; set; }
+        public TimeSpan ScheduledTime { get; set; }
     }
 
 
     public class UpdateExaminationClassDto
     {
         // Fields allowed to be updated on an examination class record
-        [Required] public DateTime ScheduledDate { get; set; }
-        [Required] public TimeSpan ScheduledTime { get; set; }
+        public DateTime ScheduledDate { get; set; }
+        public TimeSpan ScheduledTime { get; set; }
     }
 
 

@@ -18,14 +18,14 @@ namespace SchoolManagementSystem.DTOs.User
     // 2. Fields required when admin updates a user's status
     public class UpdateUserStatusDto
     {
-        [Required] public UserStatus Status { get; set; }           
+        public UserStatus Status { get; set; }           
     }
 
 
     // 3. Fields required when admin updates a user's role
     public class UpdateUserRoleDto
     {
-        [Required] public UserRole Role { get; set; }
+        public UserRole Role { get; set; }
     }
 
 

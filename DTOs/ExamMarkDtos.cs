@@ -5,8 +5,8 @@ namespace SchoolManagementSystem.DTOs.ExamMarks
     public class CreateExamMarkDto
     {
         // Fields required when entering marks for a student
-        [Required] public decimal MarksObtained { get; set; }
-        [Required]public bool ExamAbsent { get; set; }
+        public decimal MarksObtained { get; set; }
+        public bool ExamAbsent { get; set; }
 
         public string? Remarks { get; set; }   // Optional: teacher remarks
 
@@ -27,9 +27,9 @@ namespace SchoolManagementSystem.DTOs.ExamMarks
     public class UpdateExamMarkDto
     {
         // Fields allowed to be updated on an exam mark record
-        [Required] public decimal MarksObtained { get; set; }
-        [Required] public bool ExamAbsent { get; set; }
-        
+        public decimal MarksObtained { get; set; }
+        public bool ExamAbsent { get; set; }
+
         public string? Remarks { get; set; }
     }
 
