@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.DTOs.NonAcademicStaff
@@ -5,17 +6,34 @@ namespace SchoolManagementSystem.DTOs.NonAcademicStaff
     public class CreateNonAcademicStaffDto
     {
         // Fields required when creating a new non-academic staff record
-        public Title Title { get; set; }                             
+        [Required] public Title Title { get; set; }    
+
+        [Required(ErrorMessage = "Name is required.")]                         
         public string Name { get; set; } = string.Empty;
-        public string NIC { get; set; } = string.Empty;             
-        public Gender Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
+
+        [Required(ErrorMessage = "NIC is required.")]
+        public string NIC { get; set; } = string.Empty;  
+
+        [Required]  public Gender Gender { get; set; }
+        [Required] public DateTime DateOfBirth { get; set; }
+
+        [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Phone is required.")]
         public string Phone { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
-        public DateTime DateOfJoining { get; set; }
-        public EmployeeStatus EmploymentStatus { get; set; }        
-        public string EmployeeType { get; set; } = string.Empty;    
+
+        [Required] public DateTime DateOfJoining { get; set; }
+        [Required] public EmployeeStatus EmploymentStatus { get; set; }   
+
+        [Required(ErrorMessage = "Employee type is required.")]     
+        public string EmployeeType { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Position is required.")]  
         public string Position { get; set; } = string.Empty;       
     }
 
@@ -23,16 +41,33 @@ namespace SchoolManagementSystem.DTOs.NonAcademicStaff
     public class UpdateNonAcademicStaffDto
     {
         // Fields allowed to be updated on a non-academic staff record
-        public Title Title { get; set; }
+        [Required] public Title Title { get; set; }
+
+        [Required(ErrorMessage = "Name is required.")]
         public string Name { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "NIC is required.")]
         public string NIC { get; set; } = string.Empty;
-        public Gender Gender { get; set; }
-        public DateTime DateOfBirth { get; set; }
+
+        [Required] public Gender Gender { get; set; }
+        [Required] public DateTime DateOfBirth { get; set; }
+
+        [Required(ErrorMessage = "Address is required.")]
         public string Address { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Phone is required.")]
         public string Phone { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Email is required.")]
+        [EmailAddress(ErrorMessage = "Invalid email format.")]
         public string Email { get; set; } = string.Empty;
-        public EmployeeStatus EmploymentStatus { get; set; }        
+
+        [Required] public EmployeeStatus EmploymentStatus { get; set; }  
+
+        [Required(ErrorMessage = "Employee type is required.")]      
         public string EmployeeType { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Position is required.")]
         public string Position { get; set; } = string.Empty;
 
     }
