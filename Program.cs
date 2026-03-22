@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SchoolManagementSystem.Services;
+using SchoolManagementSystem.Models;
+using SchoolManagementSystem.Models.Enums;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -103,6 +105,28 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
+
+// Seed first Admin user on first startup
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider
+        .GetRequiredService<SchoolDbContext>();
+
+        if (!context.Users.Any())
+    {
+        context.Users.Add(new User
+        {
+            UserName = "superadmin",
+            Password = BCrypt.Net.BCrypt.HashPassword("Admin@1234"),
+            Email = "admin@school.lk",
+            Role = UserRole.Admin,
+            Status = UserStatus.Active,
+            CreateDate = DateTime.UtcNow
+        });
+        context.SaveChanges();
+        Console.WriteLine("Super admin seeded successfully.");
+    }
+}
 
 app.Run();
 

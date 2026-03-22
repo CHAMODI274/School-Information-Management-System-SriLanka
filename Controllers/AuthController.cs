@@ -5,6 +5,7 @@ using SchoolManagementSystem.DTOs;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Models.Enums;
 using SchoolManagementSystem.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SchoolManagementSystem.Controllers
 {
@@ -65,10 +66,9 @@ namespace SchoolManagementSystem.Controllers
         // Post api/auth/register
         // Body: { "userName": "admin01", "password": "secret123", "email": "admin@school.lk", "role": "Admin" }
 
-        // NOTE: In production, protect this endpoint so only Admins can call it.
-        //       For now it is open so you can create your first admin account.
 
         [HttpPost("register")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestDto dto)
         {
             // Step 1: Check if username already exists
