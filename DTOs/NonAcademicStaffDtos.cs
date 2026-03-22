@@ -42,10 +42,10 @@ namespace SchoolManagementSystem.DTOs.NonAcademicStaff
     {
         // Fields returned to the client when fetching non-academic staff data
         public int EmployeeId { get; set; }
-        public string Title { get; set; } = string.Empty;         
+        public string Title { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;
         public string NIC { get; set; } = string.Empty;
-        public string Gender { get; set; } = string.Empty;         
+        public string Gender { get; set; } = string.Empty;
         public DateTime DateOfBirth { get; set; }
         public string Address { get; set; } = string.Empty;
         public string Phone { get; set; } = string.Empty;

@@ -3,11 +3,11 @@ namespace SchoolManagementSystem.DTOs.Subject
     public class CreateSubjectDto
     {
         // Fields required when creating a new subject
-        public string SubjectName { get; set; } = string.Empty;     
-        public string SubjectCode { get; set; } = string.Empty;     
-        public string? Description { get; set; }                     
-        public int Credits { get; set; }                             
-        public bool IsCompulsory { get; set; }                       
+        public string SubjectName { get; set; } = string.Empty;
+        public string SubjectCode { get; set; } = string.Empty;
+        public string? Description { get; set; }
+        public int Credits { get; set; }
+        public bool IsCompulsory { get; set; }
     }
 
 
