@@ -1,14 +1,25 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SchoolManagementSystem.DTOs.ExamMarks
 {
     public class CreateExamMarkDto
     {
         // Fields required when entering marks for a student
-        public decimal MarksObtained { get; set; }
-        public bool ExamAbsent { get; set; }
+        [Required] public decimal MarksObtained { get; set; }
+        [Required]public bool ExamAbsent { get; set; }
+
         public string? Remarks { get; set; }   // Optional: teacher remarks
+
+        [Required(ErrorMessage = "Teacher is required.")]
         public int TeacherId { get; set; }
+
+        [Required(ErrorMessage = "Exam is required.")]
         public int ExamId { get; set; }
+
+        [Required(ErrorMessage = "Class curriculum is required.")]
         public int ClassCurriculumId { get; set; }   // Subject the marks belong to
+
+        [Required(ErrorMessage = "Enrollment is required.")]
         public int EnrollmentId { get; set; }     
     }
 
@@ -16,8 +27,9 @@ namespace SchoolManagementSystem.DTOs.ExamMarks
     public class UpdateExamMarkDto
     {
         // Fields allowed to be updated on an exam mark record
-        public decimal MarksObtained { get; set; }
-        public bool ExamAbsent { get; set; }
+        [Required] public decimal MarksObtained { get; set; }
+        [Required] public bool ExamAbsent { get; set; }
+        
         public string? Remarks { get; set; }
     }
 

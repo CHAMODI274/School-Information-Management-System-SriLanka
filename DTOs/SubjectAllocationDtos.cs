@@ -1,9 +1,15 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SchoolManagementSystem.DTOs.SubjectAllocation
 {
     public class CreateSubjectAllocationDto
     {
         // Fields required when assigning a teacher to a subject in a class
+
+        [Required(ErrorMessage = "Class curriculum is required.")]
         public int ClassCurriculumId { get; set; }   // The class-subject combination
+
+        [Required(ErrorMessage = "Teacher is required.")]
         public int TeacherId { get; set; }   // Teacher being assigned
     }
 
@@ -11,6 +17,8 @@ namespace SchoolManagementSystem.DTOs.SubjectAllocation
     public class UpdateSubjectAllocationDto
     {
         // Fields allowed to be updated on a subject allocation record
+
+        [Required(ErrorMessage = "Teacher is required.")]
         public int TeacherId { get; set; } 
     }
 

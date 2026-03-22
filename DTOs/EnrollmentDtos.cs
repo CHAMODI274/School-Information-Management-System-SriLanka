@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.DTOs.Enrollment
@@ -5,9 +6,15 @@ namespace SchoolManagementSystem.DTOs.Enrollment
     public class CreateEnrollmentDto
     {
         // Fields required when enrolling a student into a class
-        public DateTime EnrollmentDate { get; set; }
+        [Required] public DateTime EnrollmentDate { get; set; }
+
+        [Required(ErrorMessage = "Student is required.")]
         public int StudentId { get; set; }
+
+        [Required(ErrorMessage = "Class is required.")]
         public int ClassId { get; set; }
+
+        [Required(ErrorMessage = "Academic year is required.")]
         public int YearId { get; set; }
     }
 
@@ -15,7 +22,9 @@ namespace SchoolManagementSystem.DTOs.Enrollment
     public class UpdateEnrollmentDto
     {
         // Fields allowed to be updated on an enrollment record
-        public EnrollmentStatus Status { get; set; }
+        [Required] public EnrollmentStatus Status { get; set; }
+
+        [Required(ErrorMessage = "Class is required.")]
         public int ClassId { get; set; }
     }
 

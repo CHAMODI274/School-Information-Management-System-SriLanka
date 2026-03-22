@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.DTOs.Class
@@ -5,12 +6,23 @@ namespace SchoolManagementSystem.DTOs.Class
     public class CreateClassDto
     {
         // Fields required when creating a new class
+
+        [Required(ErrorMessage = "Grade is required.")]
         public string Grade { get; set; } = string.Empty; // e.g. "Grade 10", "Grade 11"
+
+        [Required(ErrorMessage = "Section is required.")]
         public string Section { get; set; } = string.Empty;  // e.g. "A", "B", "C"
-        public int MaxStudents { get; set; }
+
+        [Required] public int MaxStudents { get; set; }
+
         public string? RoomNumber { get; set; }  // Optional: classroom number
-        public MediumType Medium { get; set; }  // Medium enum: English, Sinhala, Tamil
+
+        [Required] public MediumType Medium { get; set; }  // Medium enum: English, Sinhala, Tamil
+
+        [Required(ErrorMessage = "Class teacher is required.")]
         public int TeacherId { get; set; }  // Class teacher assigned to this class
+
+        [Required(ErrorMessage = "Academic year is required.")]
         public int YearId { get; set; }  // Academic year this class belongs to
     }
 
@@ -18,11 +30,20 @@ namespace SchoolManagementSystem.DTOs.Class
     public class UpdateClassDto
     {
         // Fields allowed to be updated on a class record
+
+        [Required(ErrorMessage = "Grade is required.")]
         public string Grade { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Section is required.")]
         public string Section { get; set; } = string.Empty;
-        public int MaxStudents { get; set; }
+
+        [Required] public int MaxStudents { get; set; }
+
         public string? RoomNumber { get; set; }
-        public MediumType Medium { get; set; }
+
+        [Required] public MediumType Medium { get; set; }
+
+        [Required(ErrorMessage = "Class teacher is required.")]
         public int TeacherId { get; set; } // Class teacher can be reassigned
     }
 

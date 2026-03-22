@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.DTOs.Attendance
@@ -5,9 +6,13 @@ namespace SchoolManagementSystem.DTOs.Attendance
     public class CreateAttendanceDto
     {
         // Fields required when marking attendance for a student
-        public DateTime Date { get; set; }
-        public AttendanceStatus Status { get; set; }
+        [Required]public DateTime Date { get; set; }
+        [Required]public AttendanceStatus Status { get; set; }
+
+        [Required(ErrorMessage = "Teacher is required.")]
         public int TeacherId { get; set; }
+
+        [Required(ErrorMessage = "Enrollment is required.")]
         public int EnrollmentId { get; set; }
     }
 
@@ -15,7 +20,7 @@ namespace SchoolManagementSystem.DTOs.Attendance
     public class UpdateAttendanceDto
     {
         // Fields allowed to be updated on an attendance record
-        public AttendanceStatus Status { get; set; }
+        [Required] public AttendanceStatus Status { get; set; }
     }
 
 

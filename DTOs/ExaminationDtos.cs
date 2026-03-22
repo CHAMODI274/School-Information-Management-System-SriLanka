@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.DTOs.Examination
@@ -5,11 +6,17 @@ namespace SchoolManagementSystem.DTOs.Examination
     public class CreateExaminationDto
     {
        // Fields required when creating a new examination 
+
+       [Required(ErrorMessage = "Exam name is required.")]
        public string ExamName { get; set; } = string.Empty;
-       public ExamType ExamType { get; set; }
-       public string Term { get; set; } = string.Empty;
-       public decimal MaxMark { get; set; }
-       public string? Description { get; set; }
+       
+       [Required] public ExamType ExamType { get; set; }
+       [Required] public string Term { get; set; } = string.Empty;
+       [Required] public decimal MaxMark { get; set; }
+
+       public string? Description { get; set; } // optional
+
+       [Required(ErrorMessage = "Academic year is required.")]
        public int YearId { get; set; }
     }
 
@@ -17,10 +24,17 @@ namespace SchoolManagementSystem.DTOs.Examination
     public class UpdateExaminationDto
     {
         // Fields allowed to be updated on an examination record
+
+        [Required(ErrorMessage = "Exam name is required.")]
         public string ExamName { get; set; } = string.Empty;
-        public ExamType ExamType { get; set; }
+        
+        [Required] public ExamType ExamType { get; set; }
+
+        [Required(ErrorMessage = "Term is required.")]
         public string Term { get; set; } = string.Empty;
-        public decimal MaxMark { get; set; }
+
+        [Required] public decimal MaxMark { get; set; }
+        
         public string? Description { get; set; }
     }
 

@@ -1,21 +1,29 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SchoolManagementSystem.DTOs.AcademicYear
 {
     public class CreateAcademicYearDto
     {
         //Fields required when creating a new academic year
+
+        [Required(ErrorMessage = "Year is required.")]
         public string Year { get; set; } = string.Empty;
-        public DateTime StartDate { get; set; }   // Start date of the academic year
-        public DateTime EndDate { get; set; }   
+
+        [Required] public DateTime StartDate { get; set; }   // Start date of the academic year
+        [Required] public DateTime EndDate { get; set; }   
     }
 
 
     public class UpdateAcademicYearDto
     {
         // Fields allowed to be updated on an academic year record
+        
+        [Required(ErrorMessage = "Year is required.")]
         public string Year { get; set; } = string.Empty;
-        public DateTime StartDate { get; set; }
-        public DateTime EndDate { get; set; }
-        public bool IsActive { get; set; }
+
+        [Required] public DateTime StartDate { get; set; }
+        [Required] public DateTime EndDate { get; set; }
+        [Required] public bool IsActive { get; set; }
     }
 
 

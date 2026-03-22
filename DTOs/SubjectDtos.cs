@@ -1,25 +1,39 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SchoolManagementSystem.DTOs.Subject
 {
     public class CreateSubjectDto
     {
         // Fields required when creating a new subject
+
+        [Required(ErrorMessage = "Subject name is required.")]
         public string SubjectName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Subject code is required.")]
         public string SubjectCode { get; set; } = string.Empty;
+
         public string? Description { get; set; }
-        public int Credits { get; set; }
-        public bool IsCompulsory { get; set; }
+
+        [Required] public int Credits { get; set; }
+        [Required] public bool IsCompulsory { get; set; }
     }
 
 
     public class UpdateSubjectDto
     {
         // Fields allowed to be updated on a subject record
+
+        [Required(ErrorMessage = "Subject name is required.")]
         public string SubjectName { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "Subject code is required.")]
         public string SubjectCode { get; set; } = string.Empty;
+
         public string? Description { get; set; }
-        public int Credits { get; set; }
-        public bool IsCompulsory { get; set; }
-        public bool IsActive { get; set; }     
+        
+        [Required] public int Credits { get; set; }
+        [Required] public bool IsCompulsory { get; set; }
+        [Required] public bool IsActive { get; set; }     
     }
 
 
