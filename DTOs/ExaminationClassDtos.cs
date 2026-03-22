@@ -1,4 +1,4 @@
-namespace SchoolManagementSystem.DTOs.Examination
+namespace SchoolManagementSystem.DTOs.ExaminationClass
 {
     public class CreateExaminationClassDto
     {

@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Microsoft.EntityFrameworkCore;
 using SchoolManagementSystem.Data;
 using SchoolManagementSystem.DTOs;
@@ -36,11 +35,11 @@ namespace SchoolManagementSystem.Controllers
                 if (user == null)
                 return Unauthorized(new { message = "Invalid username or password."});
 
-                // Step 3 : Check if account is acctive
+                // Step 3 : Check if account is active
                 if (user.Status == UserStatus.Inactive)
                     return Unauthorized(new {message = "Account is disabled. Contact admin."});
 
-             // Step 4 : Verify the password using BCryppt
+             // Step 4 : Verify the password using BCrypt
              bool passwordValid = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
                 if (!passwordValid)
                     return Unauthorized(new {message = "Invalid username or password."});
