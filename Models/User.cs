@@ -24,8 +24,8 @@ namespace SchoolManagementSystem.Models
         [MaxLength(100)]
         public string Email { get; set; } = string.Empty;
         
-        [MaxLength(20)] public UserRole Role { get; set; }
-        [MaxLength(10)] public UserStatus Status { get; set; }
+        public UserRole Role { get; set; }
+        public UserStatus Status { get; set; }
         public DateTime CreateDate { get; set; }
 
 

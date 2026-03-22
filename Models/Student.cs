@@ -19,7 +19,7 @@ namespace SchoolManagementSystem.Models
         [Required] [MaxLength(50)] public string FirstName { get; set; } = string.Empty;
         [MaxLength(50)] public string LastName { get; set; } = string.Empty;
         
-        [MaxLength(10)] public Gender Gender { get; set; } // Uses Gender enum
+        public Gender Gender { get; set; } // Uses Gender enum
 
         public DateTime DateOfBirth { get; set; }
         public DateTime EnrollmentDate { get; set; }
@@ -31,7 +31,7 @@ namespace SchoolManagementSystem.Models
 
         public DateTime? PassOutDate { get; set; }
         
-        [MaxLength(20)] public StudentStatus CurrentStatus { get; set; }
+        public StudentStatus CurrentStatus { get; set; }
         
         [MaxLength(500)] public string? Photo { get; set; }
 

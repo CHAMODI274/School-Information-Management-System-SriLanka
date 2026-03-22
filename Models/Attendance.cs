@@ -12,7 +12,7 @@ namespace SchoolManagementSystem.Models
         public int AttendanceId { get; set; }
         public DateTime Date { get; set; }
         
-        [MaxLength(10)] public AttendanceStatus Status { get; set; } // Use enum
+        public AttendanceStatus Status { get; set; } // Use enum
 
         public int? TeacherId { get; set; } 
         public Teacher? Teacher { get; set; }

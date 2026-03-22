@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-//using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.Models
 {

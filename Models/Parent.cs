@@ -11,7 +11,7 @@ namespace SchoolManagementSystem.Models
         [Key]
         public int ParentId { get; set; }
 
-        [MaxLength(10)] public Title Title { get; set; } // Title enum
+        public Title Title { get; set; } // Title enum
         [Required] [MaxLength(150)] public string Name { get; set; } = string.Empty;
         [MaxLength(20)] public string NIC { get; set; } = string.Empty;
         [MaxLength(20)] public string Phone { get; set; } = string.Empty;
