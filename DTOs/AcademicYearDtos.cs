@@ -1,5 +1,3 @@
-using SchoolManagementSystem.Models.Enums;
-
 namespace SchoolManagementSystem.DTOs.AcademicYear
 {
     public class CreateAcademicYearDto
