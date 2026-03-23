@@ -106,18 +106,24 @@ app.UseAuthorization();
 app.MapControllers();
 
 
+// Seed password is loaded from appsettings.Development.json
+var adminPassword = builder.Configuration["Seed:AdminPassword"]
+    ?? throw new Exception("Seed:AdminPassword not configured");
+
 // Seed first Admin user on first startup
 using (var scope = app.Services.CreateScope())
 {
     var context = scope.ServiceProvider
         .GetRequiredService<SchoolDbContext>();
 
-        if (!context.Users.Any())
+
+    // Only runs if no users exist in the database
+    if (!context.Users.Any())
     {
         context.Users.Add(new User
         {
             UserName = "superadmin",
-            Password = BCrypt.Net.BCrypt.HashPassword("Admin@1234"),
+            Password = BCrypt.Net.BCrypt.HashPassword(adminPassword), // password from config
             Email = "admin@school.lk",
             Role = UserRole.Admin,
             Status = UserStatus.Active,
