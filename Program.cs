@@ -28,6 +28,8 @@ builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
+
+
 // 3. JWT Authentication
 
 var jwtKey = builder.Configuration["Jwt:Key"]
