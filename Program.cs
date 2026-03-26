@@ -7,6 +7,8 @@ using Microsoft.OpenApi.Models;
 using SchoolManagementSystem.Services;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Models.Enums;
+using SchoolManagementSystem.Repositories;
+using SchoolManagementSystem.Interfaces;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +23,10 @@ builder.Services.AddDbContext<SchoolDbContext>(options =>
 
 // 2. Register JwtService -> so it can be injected into AuthController
 builder.Services.AddScoped<JwtService>();
+
+// User Management
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 // 3. JWT Authentication
 
