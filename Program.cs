@@ -27,7 +27,9 @@ builder.Services.AddScoped<JwtService>();
 // User Management
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
-
+// Parent
+builder.Services.AddScoped<IParentRepository, ParentRepository>();
+builder.Services.AddScoped<IParentService, ParentService>();
 
 
 // 3. JWT Authentication
