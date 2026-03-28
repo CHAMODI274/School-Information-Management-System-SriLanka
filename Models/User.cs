@@ -34,6 +34,6 @@ namespace SchoolManagementSystem.Models
         public Parent? Parent { get; set; }
         public Teacher? Teacher { get; set; }
         public ManagementStaff? ManagementStaff { get; set; }
-        public NonAcademicStaff? NonAcademicStaff { get; set; }
+        public AdministrativeStaff? AdministrativeStaff { get; set; }
     }
 }

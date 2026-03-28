@@ -6,7 +6,7 @@ using SchoolManagementSystem.Models.Enums;
 
 namespace SchoolManagementSystem.Models
 {
-    public class NonAcademicStaff
+    public class AdministrativeStaff
     {
         [Key]
         public int EmployeeId { get; set; }

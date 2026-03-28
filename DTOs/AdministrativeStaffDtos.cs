@@ -1,11 +1,11 @@
 using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
-namespace SchoolManagementSystem.DTOs.NonAcademicStaff
+namespace SchoolManagementSystem.DTOs.AdministrativeStaffDtos
 {
-    public class CreateNonAcademicStaffDto
+    public class CreateAdministrativeStaffDto
     {
-        // Fields required when creating a new non-academic staff record
+        // Fields required when creating a new Administrative Staff record
         public Title Title { get; set; }    
 
         [Required(ErrorMessage = "Name is required.")]                         
@@ -38,7 +38,7 @@ namespace SchoolManagementSystem.DTOs.NonAcademicStaff
     }
 
 
-    public class UpdateNonAcademicStaffDto
+    public class UpdateAdministrativeStaffDto
     {
         // Fields allowed to be updated on a non-academic staff record
         public Title Title { get; set; }
@@ -73,9 +73,9 @@ namespace SchoolManagementSystem.DTOs.NonAcademicStaff
     }
 
 
-    public class NonAcademicStaffResponseDto
+    public class AdministrativeStaffResponseDto
     {
-        // Fields returned to the client when fetching non-academic staff data
+        // Fields returned to the client when fetching administrative staff data
         public int EmployeeId { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Name { get; set; } = string.Empty;

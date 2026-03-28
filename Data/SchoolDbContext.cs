@@ -17,7 +17,7 @@ namespace SchoolManagementSystem.Data
         public DbSet<Parent> Parents { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<ManagementStaff> ManagementStaffs { get; set; }
-        public DbSet<NonAcademicStaff> NonAcademicStaffs { get; set; }
+        public DbSet<AdministrativeStaff> AdministrativeStaffs { get; set; }
         
         public DbSet<AcademicYear> AcademicYears { get; set; }
         public DbSet<Class> Classes { get; set; }
@@ -84,11 +84,11 @@ namespace SchoolManagementSystem.Data
                 .Property(m => m.EmploymentStatus).HasConversion<string>();
 
             // NonAcademicStaff
-            modelBuilder.Entity<NonAcademicStaff>()
+            modelBuilder.Entity<AdministrativeStaff>()
                 .Property(n => n.Title).HasConversion<string>();
-            modelBuilder.Entity<NonAcademicStaff>()
+            modelBuilder.Entity<AdministrativeStaff>()
                 .Property(n => n.Gender).HasConversion<string>();
-            modelBuilder.Entity<NonAcademicStaff>()
+            modelBuilder.Entity<AdministrativeStaff>()
                 .Property(n => n.EmploymentStatus).HasConversion<string>();
 
             // Class
