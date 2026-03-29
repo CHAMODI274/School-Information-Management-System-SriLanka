@@ -30,6 +30,9 @@ builder.Services.AddScoped<IUserService, UserService>();
 // Parent
 builder.Services.AddScoped<IParentRepository, ParentRepository>();
 builder.Services.AddScoped<IParentService, ParentService>();
+// Student
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IStudentService, StudentService>();
 
 
 // 3. JWT Authentication
