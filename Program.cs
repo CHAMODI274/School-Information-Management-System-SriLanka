@@ -39,6 +39,9 @@ builder.Services.AddScoped<ITeacherService, TeacherService>();
 //ManagementStaff
 builder.Services.AddScoped<IManagementStaffRepository, ManagementStaffRepository>();
 builder.Services.AddScoped<IManagementStaffService, ManagementStaffService>();
+//AdministrativeStaff
+builder.Services.AddScoped<IAdministrativeStaffRepository, AdministrativeStaffRepositiry>();
+builder.Services.AddScoped<IAdministrativeStaffService, AdministrativeStaffService>();
 
 
 // 3. JWT Authentication
