@@ -35,7 +35,10 @@ builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<IStudentService, StudentService>();
 //Teacher
 builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
-builder.Services.AddScoped<ITeacherService,    TeacherService>();
+builder.Services.AddScoped<ITeacherService, TeacherService>();
+//ManagementStaff
+builder.Services.AddScoped<IManagementStaffRepository, ManagementStaffRepository>();
+builder.Services.AddScoped<IManagementStaffService, ManagementStaffService>();
 
 
 // 3. JWT Authentication
