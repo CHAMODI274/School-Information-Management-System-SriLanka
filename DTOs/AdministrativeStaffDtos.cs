@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using SchoolManagementSystem.Models.Enums;
 
-namespace SchoolManagementSystem.DTOs.AdministrativeStaffDtos
+namespace SchoolManagementSystem.DTOs.AdministrativeStaff
 {
     public class CreateAdministrativeStaffDto
     {
