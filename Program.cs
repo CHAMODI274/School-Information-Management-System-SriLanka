@@ -36,12 +36,15 @@ builder.Services.AddScoped<IStudentService, StudentService>();
 //Teacher
 builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
 builder.Services.AddScoped<ITeacherService, TeacherService>();
-//ManagementStaff
+//Management Staff
 builder.Services.AddScoped<IManagementStaffRepository, ManagementStaffRepository>();
 builder.Services.AddScoped<IManagementStaffService, ManagementStaffService>();
-//AdministrativeStaff
+//Administrative Staff
 builder.Services.AddScoped<IAdministrativeStaffRepository, AdministrativeStaffRepositiry>();
 builder.Services.AddScoped<IAdministrativeStaffService, AdministrativeStaffService>();
+// Academic Year
+builder.Services.AddScoped<IAcademicYearRepository, AcademicYearRepository>();
+builder.Services.AddScoped<IAcademicYearService, AcademicYearService>();
 
 
 // 3. JWT Authentication
