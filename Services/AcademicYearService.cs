@@ -84,6 +84,8 @@ namespace SchoolManagementSystem.Services
 
 
 
+
+
         // Update an existing academic year's details
         public async Task<AcademicYearResponseDto?> UpdateAsync(int id, UpdateAcademicYearDto dto)
         {
@@ -129,6 +131,8 @@ namespace SchoolManagementSystem.Services
 
 
 
+
+
         // Delete an academic year
         public async Task<bool> DeleteAsync(int id)
         {
@@ -156,7 +160,7 @@ namespace SchoolManagementSystem.Services
                 EndDate = a.EndDate,
                 IsActive = a.IsActive
             };
-            
+
         }
 
 
