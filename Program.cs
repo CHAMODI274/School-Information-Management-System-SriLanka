@@ -51,6 +51,11 @@ builder.Services.AddScoped<IClassService, ClassService>();
 // Subject
 builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
 builder.Services.AddScoped<ISubjectService, SubjectService>();
+// Class Curriculum
+builder.Services.AddScoped<IClassCurriculumRepository, ClassCurriculumRepository>();
+builder.Services.AddScoped<IClassCurriculumService, ClassCurriculumService>();
+
+
 
 // 3. JWT Authentication
 
