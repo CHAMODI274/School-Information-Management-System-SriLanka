@@ -48,6 +48,9 @@ builder.Services.AddScoped<IAcademicYearService, AcademicYearService>();
 // Class
 builder.Services.AddScoped<IClassRepository, ClassRepository>();
 builder.Services.AddScoped<IClassService, ClassService>();
+// Subject
+builder.Services.AddScoped<ISubjectRepository, SubjectRepository>();
+builder.Services.AddScoped<ISubjectService, SubjectService>();
 
 // 3. JWT Authentication
 
