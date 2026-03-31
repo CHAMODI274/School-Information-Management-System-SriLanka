@@ -24,6 +24,7 @@ builder.Services.AddDbContext<SchoolDbContext>(options =>
 // 2. Register JwtService -> so it can be injected into AuthController
 builder.Services.AddScoped<JwtService>();
 
+
 // User Management
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -54,6 +55,9 @@ builder.Services.AddScoped<ISubjectService, SubjectService>();
 // Class Curriculum
 builder.Services.AddScoped<IClassCurriculumRepository, ClassCurriculumRepository>();
 builder.Services.AddScoped<IClassCurriculumService, ClassCurriculumService>();
+// Subject Allocation
+builder.Services.AddScoped<ISubjectAllocationRepository, SubjectAllocationRepository>();
+builder.Services.AddScoped<ISubjectAllocationService, SubjectAllocationService>();
 
 
 
