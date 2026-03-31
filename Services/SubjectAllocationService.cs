@@ -144,14 +144,14 @@ namespace SchoolManagementSystem.Services
                 SubjectCode = sa.ClassCurriculum?.Subject?.SubjectCode ?? string.Empty,
 
                 // come from ClassCurriculum -> Class (nested navigation)
-                Grade   = sa.ClassCurriculum?.Class?.Grade   ?? string.Empty,
+                Grade = sa.ClassCurriculum?.Class?.Grade ?? string.Empty,
                 Section = sa.ClassCurriculum?.Class?.Section ?? string.Empty,
 
                 // come from ClassCurriculum -> AcademicYear (nested navigation)
                 Year = sa.ClassCurriculum?.AcademicYear?.Year ?? string.Empty,
 
                 // come from Teacher (direct navigation)
-                TeacherId   = sa.TeacherId,
+                TeacherId = sa.TeacherId,
                 TeacherName = sa.Teacher?.Name ?? string.Empty
             };
         }
