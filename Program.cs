@@ -58,6 +58,8 @@ builder.Services.AddScoped<IClassCurriculumService, ClassCurriculumService>();
 // Subject Allocation
 builder.Services.AddScoped<ISubjectAllocationRepository, SubjectAllocationRepository>();
 builder.Services.AddScoped<ISubjectAllocationService, SubjectAllocationService>();
+// Enrollment
+builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
 
 
 
