@@ -61,6 +61,8 @@ builder.Services.AddScoped<ISubjectAllocationService, SubjectAllocationService>(
 // Enrollment
 builder.Services.AddScoped<IEnrollmentRepository, EnrollmentRepository>();
 builder.Services.AddScoped<IEnrollmentService, EnrollmentService>();
+// Attendance
+builder.Services.AddScoped<IAttendanceRepository, AttendanceRepository>();
 
 
 
