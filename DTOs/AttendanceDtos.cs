@@ -53,7 +53,4 @@ namespace SchoolManagementSystem.DTOs.Attendance
         public decimal AttendancePercentage { get; set; } // attendance precentage -> calculate by the service
     }
 
-
-
-    
 }
