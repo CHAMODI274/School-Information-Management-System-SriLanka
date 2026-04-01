@@ -19,8 +19,7 @@ namespace SchoolManagementSystem.DTOs.Attendance
 
     public class UpdateAttendanceDto
     {
-        // Fields allowed to be updated on an attendance record
-        public AttendanceStatus Status { get; set; }
+        public AttendanceStatus Status { get; set; } // Only Status can be updated
     }
 
 
@@ -36,4 +35,25 @@ namespace SchoolManagementSystem.DTOs.Attendance
         public string StudentName { get; set; } = string.Empty;
         public string AdmissionNumber { get; set; } = string.Empty;
     }
+
+
+
+    public class AttendanceSummaryDto
+    {
+        // Returned when fetching an attendance summary for a student
+        public int EnrollmentId { get; set; }
+        public string StudentName { get; set; } = string.Empty;
+        public string AdmissionNumber { get; set; } = string.Empty;
+        public string Grade { get; set; } = string.Empty;
+        public string Section { get; set; } = string.Empty;
+        public string Year { get; set; } = string.Empty;
+        public int TotalDaysPresent { get; set; }
+        public int TotalDaysAbsent { get; set; }
+        public int TotalDays { get; set; }
+        public decimal AttendancePercentage { get; set; } // attendance precentage -> calculate by the service
+    }
+
+
+
+    
 }
