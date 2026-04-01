@@ -11,8 +11,7 @@ namespace SchoolManagementSystem.Interfaces
         Task<IEnumerable<Attendance>> GetByClassAndDateAsync(int classId, DateTime date);
 
         // Get all attendance records for a specific class within a month and year
-        Task<IEnumerable<Attendance>> GetByClassAndMonthAsync(
-            int classId, int month, int year);
+        Task<IEnumerable<Attendance>> GetByClassAndMonthAsync(int classId, int month, int year);
 
         // Get all attendance records across the whole school on a specific date
         Task<IEnumerable<Attendance>> GetBySchoolAndDateAsync(DateTime date);
