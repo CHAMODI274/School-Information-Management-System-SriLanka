@@ -4,11 +4,11 @@ using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using SchoolManagementSystem.Services;
 using SchoolManagementSystem.Models;
 using SchoolManagementSystem.Models.Enums;
 using SchoolManagementSystem.Repositories;
 using SchoolManagementSystem.Interfaces;
+using SchoolManagementSystem.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -73,6 +73,9 @@ builder.Services.AddScoped<IExaminationClassService, ExaminationClassService>();
 // Exam Marks
 builder.Services.AddScoped<IExamMarkRepository, ExamMarkRepository>();
 builder.Services.AddScoped<IExamMarkService, ExamMarkService>();
+
+// Student Promotion
+builder.Services.AddScoped<IPromotionService, PromotionService>();
 
 
 
