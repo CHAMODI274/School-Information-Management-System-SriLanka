@@ -41,7 +41,7 @@ builder.Services.AddScoped<ITeacherService, TeacherService>();
 builder.Services.AddScoped<IManagementStaffRepository, ManagementStaffRepository>();
 builder.Services.AddScoped<IManagementStaffService, ManagementStaffService>();
 //Administrative Staff
-builder.Services.AddScoped<IAdministrativeStaffRepository, AdministrativeStaffRepositiry>();
+builder.Services.AddScoped<IAdministrativeStaffRepository, AdministrativeStaffRepository>();
 builder.Services.AddScoped<IAdministrativeStaffService, AdministrativeStaffService>();
 // Academic Year
 builder.Services.AddScoped<IAcademicYearRepository, AcademicYearRepository>();
@@ -111,7 +111,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "School Management Systen API",
+        Title = "School Management System API",
         Version = "v1"
     });
 

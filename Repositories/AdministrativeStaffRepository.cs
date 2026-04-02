@@ -5,11 +5,11 @@ using SchoolManagementSystem.Models;
 
 namespace SchoolManagementSystem.Repositories
 {
-    public class AdministrativeStaffRepositiry : IAdministrativeStaffRepository
+    public class AdministrativeStaffRepository : IAdministrativeStaffRepository
     {
         private readonly SchoolDbContext _context;
 
-        public AdministrativeStaffRepositiry(SchoolDbContext context)
+        public AdministrativeStaffRepository(SchoolDbContext context)
         {
             _context = context;
         }
