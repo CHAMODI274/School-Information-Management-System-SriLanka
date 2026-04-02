@@ -6,7 +6,7 @@ namespace SchoolManagementSystem.Interfaces
     {
         Task<PromotionResultDto> PromoteStudentAsync(PromoteStudentDto dto);
 
-        Task<ClassPromotionResultDto> ClassPromotionAsync(ClassPromoteDto dto);
+        Task<ClassPromotionResultDto> ClassPromoteAsync(ClassPromoteDto dto);
 
         Task<SchoolPromotionResultDto> PromoteWholeSchoolAsync(SchoolPromotionDto dto);
     }
