@@ -69,6 +69,7 @@ builder.Services.AddScoped<IExaminationRepository, ExaminationRepository>();
 builder.Services.AddScoped<IExaminationService, ExaminationService>();
 // Examination Class
 builder.Services.AddScoped<IExaminationClassRepository, ExaminationClassRepository>();
+builder.Services.AddScoped<IExaminationClassService, ExaminationClassService>();
 
 
 
