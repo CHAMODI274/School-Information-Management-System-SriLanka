@@ -67,6 +67,9 @@ builder.Services.AddScoped<IAttendanceService, AttendanceService>();
 // Examination
 builder.Services.AddScoped<IExaminationRepository, ExaminationRepository>();
 builder.Services.AddScoped<IExaminationService, ExaminationService>();
+// Examination Class
+builder.Services.AddScoped<IExaminationClassRepository, ExaminationClassRepository>();
+
 
 
 
