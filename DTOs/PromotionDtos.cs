@@ -52,7 +52,7 @@ namespace SchoolManagementSystem.DTOs.Promotion
 
 
     // Returned after promoting an entire class
-    public class BulkPromotionResultDto
+    public class ClassPromotionResultDto
     {
         public int TotalProcessed { get; set; } // Total number of students processed
         public int TotalSucceeded { get; set; } // Number of students successfully promoted
